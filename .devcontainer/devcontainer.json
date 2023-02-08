@@ -1,0 +1,44 @@
+{
+    "name": "nodejs-env", 
+    "dockerFile": "Dockerfile",
+    "appPort": [3000],
+    "runArgs": [
+        "--user", "node",
+        "--env-file",".devcontainer/devcontainer.env"
+    ],
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "workbench.colorTheme": "Cobalt2",
+                "files.autoSave": "afterDelay",
+                "terminal.integrated.defaultProfile.linux": "zsh",
+                "terminal.integrated.profiles.linux": {
+                    "bash": {
+                        "path": "/bin/bash",
+                        "icon": "terminal-bash"
+                    },
+                    "zsh": {
+                        "path": "/usr/bin/zsh"
+                    }
+                }
+            },
+            "extensions": [
+                "anseki.vscode-color",                  // GUI to generate color codes such as CSS color notations
+                "christian-kohler.path-intellisense",   // Autocomplete paths
+                "ritwickdey.LiveServer",                // Updates HTML changes automatically
+                "mikestead.dotenv",                     // Support for .env files
+                "esbenp.prettier-vscode",               // Code formatter
+                "wesbos.theme-cobalt2"                  // Theme
+            ]
+        }
+    },
+    "onCreateCommand":"sh .devcontainer/onCreateCommands/onCreateCommand.sh",
+    "remoteUser": "node",
+    "mounts":[
+        {
+            "source": "${localWorkspaceFolder}/.devcontainer/config/shell_history", //Don't forget to create 'shell_history' folder and '.zsh_history' file inside.
+            "target": "/commandhistory",
+            "type": "bind"
+        }
+    ] 
+}
