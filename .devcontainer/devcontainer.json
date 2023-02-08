@@ -9,6 +9,15 @@
     "customizations": {
         "vscode": {
             "settings": {
+                "[html]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "[javascriptreact]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "[css]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
                 "workbench.colorTheme": "Cobalt2",
                 "files.autoSave": "afterDelay",
                 "terminal.integrated.defaultProfile.linux": "zsh",
