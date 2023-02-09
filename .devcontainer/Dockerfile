@@ -19,7 +19,7 @@ RUN apt-get update && \
     # This is done to keep the docker image size small by removing the `/var/lib/apt/lists/` 
     && rm -rf /var/lib/apt/lists/*
 
-RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/.bash_history" \
+RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/.zsh_history" \
     && mkdir /commandhistory \
     && touch /commandhistory/.zsh_history \
     && chown -R node /commandhistory \
