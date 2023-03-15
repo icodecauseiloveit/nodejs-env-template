@@ -32,7 +32,7 @@
                 }
             },
             "extensions": [
-                "anseki.vscode-color",                  // GUI to generate color codes such as CSS color notations
+                "AntiAntiSepticeye.vscode-color-picker",// GUI to generate color codes such as CSS color notations
                 "christian-kohler.path-intellisense",   // Autocomplete paths
                 "ritwickdey.LiveServer",                // Updates HTML changes automatically
                 "mikestead.dotenv",                     // Support for .env files
